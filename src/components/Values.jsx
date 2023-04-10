@@ -1,4 +1,5 @@
 import image from '../images/values.jpg'
+import image_ from '../images/values_crop1.png'
 import {GiCutDiamond} from 'react-icons/gi'
 import SectionHead from '../components/SectionHead'
 import './components.css'
@@ -15,6 +16,9 @@ const Values = () => {
                     <div className="values__image">
                         <img src={image} alt="" />
                     </div>
+                    <div className="values__image_">
+                        <img src={image_} alt="" />
+                    </div>
                 </div>
                 <div className="values__right">
                     <SectionHead icon={<GiCutDiamond/>} title="Values"/>
@@ -26,7 +30,7 @@ const Values = () => {
                         {
                             values.map(({id, icon, title, desc}) => {
                                 return (
-                                    <Card className="values__value">
+                                    <Card className="values__value" key={id}>
                                         <span>{icon}</span>
                                         <h4>{title}</h4>
                                         <small>{desc}</small>

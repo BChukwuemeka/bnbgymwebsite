@@ -23,11 +23,13 @@ const Navbar = () => {
                 {links.map(({name, path}, index) => {  
                     return (
                         <li key={index}>
-                            <a>
+                            
                             <NavLink to={path} className={({isActive}) => isActive ? "active-nav" : ""} onClick={() => setIsNavShowing(prev => !prev)}>
+                            
                             {name}
+                            
                             </NavLink>
-                            </a>
+                            
                         </li>
                     )
                    })}

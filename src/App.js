@@ -6,8 +6,11 @@ import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
 import Plans from "./pages/Plans/Plans";
 import Trainers from "./pages/Trainers/Trainers";
-import Footer from "./pages/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 import Navbar from './components/Navbar';
+
+
+
 
 function App() {
   return (

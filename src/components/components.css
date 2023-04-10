@@ -28,6 +28,7 @@ nav {
 
 .logo img{
     height: 4rem;
+    display: block;
 }
 
 .nav__links {
@@ -89,7 +90,7 @@ nav {
     }
 
 
-    .active-nav {
+    .active-nav, .active-nav::after {
         display: none;
     }
 
@@ -188,6 +189,11 @@ nav {
     margin-top: -3rem;
 }
 
+
+.main__header-left .btn {
+    padding: 1rem 1.5rem;
+}
+
 .main__header-left h4 {
     margin-bottom: 1rem;
     color: var(--color-secondary);
@@ -268,6 +274,10 @@ nav {
     transition: var(--transition);
 }
 
+.values__image_ {
+    display: none;
+}
+
 .values__image:hover {
     filter: saturate(1)
 }
@@ -295,24 +305,239 @@ nav {
 }
 
 
+/*==================== Values component"s css End ====================*/
+
+/*==================== FAQs component"s css start ====================*/
+
+.faqs__wrapper {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 5rem;
+    align-items: flex-start;
+}
+
+.faq {
+    background: var(--color-gray-500);
+    padding: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.faq div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq__icon {
+    background: transparent;
+    color: var(--color-gray-100);
+    font-size: 1.5rem;
+}
+
+.faq p {
+    margin-top: 1.5rem;
+}
+
+
+/*==================== FAQs component"s css End ====================*/
+
+
+/*==================== Testimonials component"s css Start ====================*/
+
+.testimonials {
+    width: 50rem;
+    margin-inline: auto;
+}
+
+.testimonials__head {
+    justify-content: center;
+}
+
+.card.testimonial {
+    position: relative;
+    text-align: left;
+    margin-top: 5rem;
+}
+
+.testimonial__avatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    position: absolute;
+    border: 2px solid transparent;
+    top: -2rem;
+    left: calc(50% - 2rem);
+    box-shadow: 0 1.5rem 2rem rgba(26, 26, 54, 0.4);
+    transition: var(--transition);
+}
+
+.testimonial:hover .testimonial__avatar {
+    border-radius: 50%;
+    border-color: var(--color-gray-400);
+}
+
+.testimonial__quote {
+    font-style: italic;
+    margin: 1rem 0 2rem;
+}
+
+.card small.testimonial__title {
+    margin-top: 0.3rem;
+}
+
+.testimonials__btn-container {
+    width: fit-content;
+    margin: 2.5rem auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonials__btn {
+    background: transparent;
+    cursor: pointer;
+}
+
+.testimonials__btn svg {
+    fill: var(--color-primary);
+    font-size: 1.8rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+
+/*==================== Testimonials component"s css End ====================*/
 
 
 
 
+/*==================== Media Queries =================================*/
+
+@media screen and (max-width: 1024px) {
+    .main__header {
+      height: fit-content;
+      padding: 5rem 0;
+
+    }
+
+    .main__header-container { 
+        gap: 0;
+    }
+
+    .main__header-circle {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .programs__wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .values__container {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    .values__wrapper{
+        gap: 4rem 3rem;
+    }
+
+    .values__image {
+        display: none;
+    }
+
+    .faqs__wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials {
+        width: 75%
+    }
 
 
+}
 
 
+/*===== Mobile Phones ================*/
 
 
+@media screen and (max-width: 600px) {
+    .main__header {
+        margin: 0 0 3rem;
+        padding: 12rem 0;
+        height: 100vh;
+    }
+
+    .main__header-container { 
+       grid-template-columns: 1fr;
+    }
+
+    .main__header-circle {
+        width: 70%;
+        height: 80%;
+        left: 3rem;
+        top: 1rem;
+    }
+
+    .main__header-image {
+        width: 80%;
+    }
 
 
+    .programs {
+        margin-top: 13rem;
+    }
 
 
+    .programs__wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .programs__program {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .values__container {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        gap: 4rem;
+    }
+   
+    .values__image_ {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .values__wrapper{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .card.card.values__value {
+        width: 84%;
+        margin-inline: auto;
+    }
 
 
+    .faqs__wrapper {
+        gap: 1rem;
+        margin-top: 3rem;
+    }
+
+    .testimonials {
+        width: 100%;
+    }
 
 
+}
 
 
 

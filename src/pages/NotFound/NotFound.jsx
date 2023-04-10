@@ -1,8 +1,16 @@
 import './notFound.css'
+import Header from '../../components/Header'
+import HeaderImage from '../../images/banner.png'
+
+
+
 
 const NotFound = () => {
   return (
-    <div>NotFound</div>
+    <>
+          <Header title="NotFound" image={HeaderImage} />
+    <div>Lorem ipsum dolor sit amet.</div>
+    </>
   )
 }
 
