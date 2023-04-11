@@ -27,7 +27,7 @@ nav {
 }
 
 .logo img{
-    height: 4rem;
+    height: 2.7rem;
     display: block;
 }
 
@@ -272,6 +272,7 @@ nav {
 .values__image {
     filter: saturate(0.25);
     transition: var(--transition);
+    border-radius: 20%;
 }
 
 .values__image_ {
@@ -513,7 +514,11 @@ nav {
    
     .values__image_ {
         display: block;
-        margin: 0 auto;
+    }
+   
+    .values__image_ img{
+        border-radius: 2rem;
+        width: 80%;
     }
 
     .values__wrapper{

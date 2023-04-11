@@ -238,6 +238,12 @@ section {
     h2 {
         font-size: 1.6rem;
     }
+
+      .header__content {
+        width: 76%;
+      }
+    
+
 }
 
 
@@ -246,6 +252,28 @@ section {
       font-size: 2.2rem;
       line-height: 1.3;
     }
+
+    .section {
+      margin-top: 7rem;
+    }
+
+    .header {
+      height: fit-content;
+    }
+
+    .header__content {
+      width: var(--container-width-md);
+      padding: 3rem 0;
+    }
+
+    img {
+      margin-inline: auto;
+    }
+
+    .header__content p {
+      font-size: 0.85rem;
+    }
+
 
 }
 

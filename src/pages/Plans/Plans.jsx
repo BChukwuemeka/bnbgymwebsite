@@ -1,20 +1,49 @@
 import './plans.css'
 import Header from '../../components/Header'
-import HeaderImage from '../../images/header_bg_4.jpg'
-
+import HeaderImage from '../../images/header_bg_4.png'
+import Card from '../../UI/Card'
+import {plans} from '../../data'
 
 
 
 
 const Plans = () => {
+
+
   return (
     <>
-    <Header title="Plans" image={HeaderImage} />
-    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-      Nobis voluptates quasi impedit perspiciatis sed voluptatibus, 
-      at consequatur ducimus neque, ullam id hic sint. 
-      Maxime voluptatem dolor ab harum veniam assumenda?</div>
-    </>
+    <Header title="Membership Plans" image={HeaderImage}>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+      Nobis voluptates quasi.
+      </Header>
+      <section className="plans">
+        <div className="container plans__container">
+          {
+            plans.map(({id, name, desc, price, features}) => {
+              return (
+                <Card key={id} className='plan'>
+                  <h3>{name}</h3>
+                  <small>{desc}</small>
+                  <h1>{`$${price}`}</h1>
+                  <h2>/mo</h2>
+                  <h4>Features</h4>
+                  {
+                    features.map(({feature, available}, index) => {
+                      return(
+                        <p key={index} className={!available ? 'disabled' : ''}>
+                          {feature}
+                        </p>
+                      )
+                    })
+                  }
+                  <button className="btn lg">Choose Plan</button>
+                </Card>
+              )
+            })
+          }
+        </div>
+      </section>
+       </>
   )
 }
 

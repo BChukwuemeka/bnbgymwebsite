@@ -1,19 +1,40 @@
 import './gallery.css'
 import Header from '../../components/Header'
-import HeaderImage from '../../images/header_bg_3.jpg'
+import HeaderImage from '../../images/header_bg_3.png'
 
 
 
 
 
 const Gallery = () => {
+  const galleryLength = 15;
+  const images = [];
+
+  for (let i = 1; i <= galleryLength ; i++ ) {
+      images.push(require(`../../images/gallery${i}.jpg`));
+
+  }
+
+
   return (
     <>
-    <Header title="Gallery" image={HeaderImage} />
+    <Header title="Gallery" image={HeaderImage}>
     Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-    Fuga aspernatur delectus odit, tempore modi harum magni eius 
-    consectetur odio magnam eveniet ratione sequi doloremque, 
-    voluptas id quidem laborum voluptates neque?
+    Fuga aspernatur delectus odit, 
+    </Header>
+    <section className="gallery">
+      <div className="container gallery__container">
+          {
+            images.map((image, index) => {
+             return (
+                <article key={index}>
+                  <img  src={image} alt={`gallery img ${index + 1}`}/>
+                </article>
+              )
+            })
+          }
+      </div>
+    </section>
     </>
   )
 }

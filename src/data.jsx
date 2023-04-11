@@ -195,7 +195,7 @@ export const testimonials = [
 export const plans = [
     {
         id: 1,
-        name: 'Silver Package',
+        name: 'Bronze Package',
         desc: 'This package is perfect for beginners who need constant help',
         price: 29.99,
         features: [
@@ -216,9 +216,30 @@ export const plans = [
     },
     {
         id: 2,
-        name: 'Gold Package',
-        desc: 'This is the perfect package for beginners who know what their doing',
+        name: 'Silver Package',
+        desc: 'This package is perfect for beginners who need a little help',
         price: 49.99,
+        features: [
+            {feature: 'First Feature', available: true},
+            {feature: 'Second Feature', available: true},
+            {feature: 'Third Feature', available: true},
+            {feature: 'Fourth Feature', available: true},
+            {feature: 'Fifth Feature', available: false},
+            {feature: 'Fifth Feature Plus', available: true},
+            {feature: 'Sixth Feature', available: false},
+            {feature: 'Seventh Feature', available: false},
+            {feature: 'Seventh Feature Plus', available: false},
+            {feature: 'Eighth Feature', available: false},
+            {feature: 'Ninth Feature', available: false},
+            {feature: 'Tenth Feature', available: false},
+            {feature: 'Eleventh Feature', available: false}
+        ]
+    },
+    {
+        id: 3,
+        name: 'Gold Package',
+        desc: 'This is the perfect package for an intermediate user who know what their doing',
+        price: 59.99,
         features: [
             {feature: 'First Feature', available: true},
             {feature: 'Second Feature', available: true},
@@ -236,7 +257,7 @@ export const plans = [
         ]
     },
     {
-        id: 3,
+        id: 4,
         name: 'Platinum Package',
         desc: 'This package is perfect for busy people who need home service',
         price: 89.99,
